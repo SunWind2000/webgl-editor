@@ -1,0 +1,35 @@
+{
+  "name": "webgl-editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.8.0",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "pnpm --filter playground dev",
+    "build": "pnpm -r --filter @webgl-editor/ui --filter @webgl-editor/demo --filter playground build",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "vitest run --config vitest.workspace.ts",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.0.0",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vue/eslint-config-typescript": "^14.8.0",
+    "@vue/test-utils": "^2.4.11",
+    "eslint": "^10.5.0",
+    "eslint-plugin-vue": "^10.9.2",
+    "globals": "^17.6.0",
+    "jsdom": "^29.1.1",
+    "jiti": "^2.7.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1",
+    "vite": "^8.0.16",
+    "vite-plugin-dts": "^5.0.2",
+    "vitest": "^4.1.9",
+    "vue-tsc": "^3.3.5"
+  }
+}

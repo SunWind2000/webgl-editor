@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Monorepo Coder"
+  short_description: "Add apps, packages, and tests in this repo"
+  default_prompt: "Use $frontend-monorepo-coder to add a new app, package, or package test module in this workspace."

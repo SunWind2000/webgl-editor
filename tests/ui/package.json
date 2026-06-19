@@ -1,0 +1,17 @@
+{
+  "name": "@webgl-editor/tests-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest --run",
+    "typecheck": "vue-tsc -p tsconfig.json --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@webgl-editor/ui": "workspace:*",
+    "@vue/test-utils": "^2.4.11",
+    "vue": "^3.5.38"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend UI Module Coder"
+  short_description: "Add UI components with playground and tests"
+  default_prompt: "Use $frontend-ui-module-coder to add a UI component or module and verify it in playground and tests."
