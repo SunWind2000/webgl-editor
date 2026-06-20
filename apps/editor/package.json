@@ -1,16 +1,16 @@
 {
-  "name": "@webgl-editor/demo",
+  "name": "@webgl-editor/editor",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "vite --host 127.0.0.1",
     "build": "vue-tsc -p tsconfig.json --noEmit && vite build",
     "typecheck": "vue-tsc -p tsconfig.json --noEmit",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@webgl-editor/ui": "workspace:*",
+    "@webgl-editor/core": "workspace:*",
     "vue": "^3.5.38"
   },
   "devDependencies": {}

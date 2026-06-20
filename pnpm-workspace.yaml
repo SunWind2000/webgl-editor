@@ -3,6 +3,11 @@ packages:
   - apps/*
   - playground
   - tests/*
+allowBuilds:
+  electron: true
+  electron-winstaller: true
+  esbuild: true
+confirmModulesPurge: false
 minimumReleaseAgeExclude:
   - '@vitest/expect@4.1.7'
   - '@vitest/mocker@4.1.7'

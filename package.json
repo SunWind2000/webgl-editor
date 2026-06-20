@@ -9,8 +9,10 @@
   },
   "scripts": {
     "dev": "pnpm --filter playground dev",
-    "build": "pnpm -r --filter @webgl-editor/ui --filter @webgl-editor/demo --filter playground build",
-    "typecheck": "pnpm -r --if-present typecheck",
+    "editor:dev:web": "node --import jiti/register scripts/editor-dev-web.ts",
+    "editor:dev:client": "node --import jiti/register scripts/editor-dev-client.ts",
+    "build": "pnpm -r --filter @webgl-editor/core --filter @webgl-editor/server --filter @webgl-editor/client --filter @webgl-editor/editor --filter @webgl-editor/ui --filter playground build",
+    "typecheck": "tsc -p tsconfig.json && pnpm -r --if-present typecheck",
     "test": "vitest run --config vitest.workspace.ts",
     "lint": "eslint ."
   },

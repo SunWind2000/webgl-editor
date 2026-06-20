@@ -1,0 +1,70 @@
+{
+  "name": "@webgl-editor/client",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "files": [
+    "dist",
+    "out"
+  ],
+  "main": "./out/main/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build:resources": "pnpm --dir ../.. --filter @webgl-editor/editor build && pnpm --dir ../.. --filter @webgl-editor/server build",
+    "build": "node --import jiti/register ../../scripts/clean-client-build.ts && electron-vite build --ignoreConfigWarning && tsc -p tsconfig.build.json",
+    "package": "pnpm run build:resources && pnpm run build && electron-builder",
+    "package:mac": "pnpm run build:resources && pnpm run build && electron-builder --mac",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@webgl-editor/server": "workspace:*"
+  },
+  "devDependencies": {
+    "electron": "^42.4.1",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^5.0.0"
+  },
+  "build": {
+    "appId": "dev.webgl-editor.client",
+    "productName": "WebGL Editor",
+    "asar": true,
+    "npmRebuild": false,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**"
+    ],
+    "extraResources": [
+      {
+        "from": "../../apps/editor/dist",
+        "to": "apps/editor/dist"
+      },
+      {
+        "from": "../server/dist",
+        "to": "server/dist"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "identity": null,
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  }
+}

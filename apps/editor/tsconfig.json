@@ -5,6 +5,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "vite.config.ts",
+    "vite-env.d.ts"
   ]
 }
