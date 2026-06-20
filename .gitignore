@@ -1,8 +1,14 @@
 node_modules/
 dist/
+packages/client/out/
+packages/client/release/
 coverage/
+docs/3_delivery/
+.tmp/
 .vite/
 .turbo/
+.pnpm-store/
 .DS_Store
+pnpm-lock.yaml
 *.local
 *.tsbuildinfo

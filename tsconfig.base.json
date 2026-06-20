@@ -11,9 +11,23 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "types": ["node", "vite/client"],
+    "types": [
+      "node",
+      "vite/client"
+    ],
     "paths": {
-      "@webgl-editor/ui": ["./packages/ui/src/index.ts"]
+      "@webgl-editor/client": [
+        "./packages/client/src/index.ts"
+      ],
+      "@webgl-editor/core": [
+        "./packages/core/src/index.ts"
+      ],
+      "@webgl-editor/server": [
+        "./packages/server/src/index.ts"
+      ],
+      "@webgl-editor/ui": [
+        "./packages/ui/src/index.ts"
+      ]
     }
   }
 }

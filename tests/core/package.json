@@ -1,0 +1,15 @@
+{
+  "name": "@webgl-editor/core-tests",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run --config vitest.config.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@webgl-editor/core": "workspace:*"
+  },
+  "devDependencies": {}
+}
